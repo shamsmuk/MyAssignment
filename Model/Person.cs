@@ -17,7 +17,7 @@ namespace MyAssignment.Model
         [Column("last_name")]
         [StringLength(50)]
         public string LastName { get; set; }
-        [Column("date_created", TypeName = "date")]
+        [Column("date_created", TypeName = "datetime")]
         public DateTime? DateCreated { get; set; }
     }
 }
