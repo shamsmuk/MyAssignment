@@ -2,6 +2,13 @@ resource "azurerm_resource_group" "rg_mukit_db" {
   name     = "rg_mukit_db"
   location = var.location
 }
+# We need to create a key vault prior to run this step.
+# Create a key vault:
+# New-AzureRmKeyVault -VaultName 'mukitkeyvault1' -ResourceGroupName 'rg_mukit_keyvault' -Location 'uksouth'
+# add a secret to Azure Key Vault:
+# $secretvalue = ConvertTo-SecureString 'XXX_Strong_Password' -AsPlainText -Force
+# $secret = Set-AzureKeyVaultSecret -VaultName 'mukitkeyvault1' -Name 'SQLpassword' -SecretValue $secretvalue
+# We can also create key vault by using Azure Portal
 
 data "azurerm_key_vault" "example" {
   name                = "mukitkeyvault1"
