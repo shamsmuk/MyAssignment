@@ -32,6 +32,7 @@ Details contents on High level design:
 - [ ] 	Backup Strategy
 - [ ] 	Recovery Plan
 - [ ] 	Regular Database Maintenance
+- [ ] Database Security
 
 Created By
 - [ ] Mukit Shams
