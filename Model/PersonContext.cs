@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Open up Package Manager Console and then run the below command which generate the automatic COntext and model
+//Scaffold-DbContext "connection string details of Azure sql db" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Model -Context "PersonContext" -DataAnnotations
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
