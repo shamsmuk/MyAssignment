@@ -31,7 +31,10 @@ namespace MyAssignment
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-           // var connection = Configuration.GetConnectionString("PersonContext");
+            // var connection = Configuration.GetConnectionString("PersonContext");
+
+            //store .net secrete Dbpass using this command in package maanger console
+            //dotnet user-secrets set "DbPass" "my_password"
             var connection = new SqlConnectionStringBuilder(
           Configuration.GetConnectionString("PersonContext"));
             connection.Password = Configuration["DBpass"];
